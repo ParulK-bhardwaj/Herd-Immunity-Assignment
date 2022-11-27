@@ -8,8 +8,9 @@ class Person(object):
     def __init__(self, _id, is_vaccinated, infection = None):
         # A person has an id, is_vaccinated and possibly an infection
         self._id = _id  # int
-        # TODO Define the other attributes of a person here
-        pass
+        self.is_vaccinated = is_vaccinated
+        self.infection = infection
+        self.is_alive = True
 
     def did_survive_infection(self):
         # This method checks if a person survived an infection. 
