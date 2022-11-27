@@ -6,9 +6,8 @@ class Virus(object):
         self.repro_rate = repro_rate
         self.mortality_rate = mortality_rate
 
-# Test this class
 if __name__ == "__main__":
-    # Test your virus class by making an instance and confirming 
+    # Virus class attribute test by making an instance and confirming 
     # it has the attributes you defined
     virus = Virus("HIV", 0.8, 0.3)
     assert virus.name == "HIV"
