@@ -56,6 +56,7 @@ class Simulation(object):
                 return True
         return False
 
+# >>>>>>>>>>>>>>>>>>>> While loop keeps running - check if it persists once the data is in
     def run(self):
         # This method starts the simulation. It should track the number of 
         # steps the simulation has run and check if the simulation should 
