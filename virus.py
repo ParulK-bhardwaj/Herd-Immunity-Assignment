@@ -15,13 +15,13 @@ if __name__ == "__main__":
     assert virus.mortality_rate == 0.3
 
 if __name__ == "__main__":
-    virus = Virus("Covid-19", 2.5, 3.4)
+    virus = Virus("Covid-19", 0.03, 0.034)
     assert virus.name == "Covid-19"
     assert virus.repro_rate == 2.5
     assert virus.mortality_rate == 3.4
 
 if __name__ == "__main__":
-    virus = Virus("RSV", 2.8, 0.5)
+    virus = Virus("RSV", 0.03, 0.5)
     assert virus.name == "RSV"
     assert virus.repro_rate == 2.8
     assert virus.mortality_rate == 0.5
