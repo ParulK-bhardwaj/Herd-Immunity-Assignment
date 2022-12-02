@@ -1,4 +1,6 @@
 import random, sys
+# Cool reference to The Hitchhiker's Guide to the Galaxy :)
+random.seed(42)
 from person import Person
 from logger import Logger
 from virus import Virus
@@ -8,7 +10,9 @@ class Simulation(object):
     def __init__(self, virus, pop_size, vacc_percentage, initial_infected=1):
         # TODO: Create a Logger object and bind it to self.logger.
         # Remember to call the appropriate logger method in the corresponding parts of the simulation.
-        
+        self.file_name = f"{virus}_herd_immunity_simulation_pop_{pop_size}_vp_{vacc_percentage}_infected_{initial_infected}.txt"
+        self.logger = Logger(self.file_name)
+        self.logger.write_metadata(pop_size, vacc_percentage, virus.name, virus.mortality_rate, virus.repro_rate)
         # TODO: Store the virus in an attribute
         self.virus = virus
         # TODO: Store pop_size in an attribute
@@ -94,24 +98,43 @@ class Simulation(object):
         # have that person interact with 100 other living people 
         # Run interactions by calling the interaction method below. That method
         # takes the infected person and a random person
-        pass
+        for infected_person in self.infected_population:
+            for i in range(100):
+                if random_person.is_infected == False and random_person.is_alive:
+                    random_person = random.choice(self.population)
+                if infected_person.is_alive:
+                    self.interaction(infected_person, random_person)
+                pass
 
     def interaction(self, infected_person, random_person):
-        # TODO: Finish this method.
+
         # The possible cases you'll need to cover are listed below:
             # random_person is vaccinated:
             #     nothing happens to random person.
+            if random_person.is_vaccinated:
+                random_person.is_alive == True
             # random_person is already infected:
             #     nothing happens to random person.
+            elif random_person.is_infected:
+                random_person.is_alive == True
             # random_person is healthy, but unvaccinated:
-            #     generate a random number between 0.0 and 1.0.  If that number is smaller
-            #     than repro_rate, add that person to the newly infected array
-            #     Simulation object's newly_infected array, so that their infected
-            #     attribute can be changed to True at the end of the time step.
+            #     generate a random number between 0.0 and 1.0.
+            elif random_person.is_infected == False and random_person.is_vaccinated == False:
+                random_number = random.random()
+                # If that number is smaller than repro_rate, 
+                #     add that person to the newly infected array
+                #     Simulation object's newly_infected array, so that their infected
+                #     attribute can be changed to True at the end of the time step.
+                if random_number < self.virus.repro_rate:
+                    self.new_infected.append(random_person)
+
         # TODO: Call logger method during this method.
-        pass
+                pass
 
     def _infect_newly_infected(self):
+        for person in self.new_infected:
+            person.is_infected = True
+            self.infected_population.append(person)
         # TODO: Call this method at the end of every time step and infect each Person.
         # TODO: Once you have iterated through the entire list of self.newly_infected, remember
         # to reset self.newly_infected back to an empty list.
@@ -119,19 +142,17 @@ class Simulation(object):
 
 
 if __name__ == "__main__":
-    # Test your simulation here
+
     virus_name = "Sniffles"
-    repro_num = 0.5
+    repro_rate = 0.5
     mortality_rate = 0.12
-    virus = Virus(virus_name, repro_num, mortality_rate)
+    virus = Virus(virus_name, repro_rate, mortality_rate)
 
     # Set some values used by the simulation
     pop_size = 1000
     vacc_percentage = 0.1
     initial_infected = 10
 
-    # Make a new instance of the imulation
-    virus = Simulation(virus, pop_size, vacc_percentage, initial_infected)
-    # sim = Simulation(pop_size, vacc_percentage, initial_infected, virus)
+    simulation = Simulation(virus, pop_size, vacc_percentage, initial_infected)
 
-    virus.run()
+    simulation.run()
