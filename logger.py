@@ -12,7 +12,7 @@ class Logger(object):
         file = open(self.file_name, "w")
         file.write(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
         file.write(f"Simulation Date: {date.today().strftime('%B %d, %Y')}\n")
-        metadata = (f"Herd Immunity Simulation for {virus_name.title()}\nPopulation Size: {pop_size}\tInitial Infected:{initial_infected}\nVaccination Rate: {vacc_percentage}%\tMortality Rate: {mortality_rate}%\tReproduction Rate: {basic_repro_num}%\n")
+        metadata = (f"Herd Immunity Simulation for {virus_name.title()}\nPopulation Size: {pop_size}\tInitial Infected:{initial_infected}\nVaccination Rate: {vacc_percentage * 100}%\tMortality Rate: {mortality_rate * 100}%\tReproduction Rate: {basic_repro_num * 100}%\n")
         file.write(metadata)
         file.write(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
         file.close()
@@ -23,7 +23,7 @@ class Logger(object):
             Using the values passed along with each person, number of new infections and number of interactions.
         """
         file = open(self.file_name, "a")
-        interaction_data = f"\nTime Step: {step_number}.\nTotal number of Interactions: {number_of_interactions}.\n Total Number of New Infections: {number_of_new_infections}.\n"
+        interaction_data = f"\nTime Step: {step_number}.\nTotal number of Interactions: {number_of_interactions}.\nTotal Number of New Infections: {number_of_new_infections}.\n"
         file.write(interaction_data)
         file.close()
         
@@ -37,12 +37,12 @@ class Logger(object):
         file.write(survival_data)
         file.close()
 
-    def log_final(self, step_number, population, fatalities, vaccinated, interactions, infections):
+    def log_final(self, step_number, survivors, fatalities, vaccinated, interactions, infections, saved):
         """
             This method appends the final data to the logfile.
         """ 
         file = open(self.file_name, "a")
         file.write("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Summary >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
-        final_data = f"Total Population: {population}.\nTotal Number of Fatalities: {fatalities}.\nTotal number of Vaccinated people: {vaccinated}.\nTotal Interactions: {interactions}.\nTotal Infections: {infections} "
+        final_data = f"Survivors: {survivors}.\nTotal Number of Fatalities: {fatalities}.\nTotal number of Vaccinated people: {vaccinated}.\nTotal Interactions: {interactions}.\nTotal Infections: {infections}\nNumber of times Vaccine saved infection: {saved}"
         file.write(final_data)
         file.close()

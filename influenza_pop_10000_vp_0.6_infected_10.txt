@@ -1,0 +1,44 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Simulation Date: December 9, 2022
+Herd Immunity Simulation for Influenza
+Population Size: 10000	Initial Infected:10
+Vaccination Rate: 60.0%	Mortality Rate: 20.0%	Reproduction Rate: 48.0%
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Time Step: 1.
+Total number of Interactions: 900.
+Total Number of New Infections: 158.
+Number of Survivors: 9998.
+Total Number of New Fatalities: 2.
+ 
+Time Step: 2.
+Total number of Interactions: 16800.
+Total Number of New Infections: 2066.
+Number of Survivors: 9964.
+Total Number of New Fatalities: 34.
+ 
+Time Step: 3.
+Total number of Interactions: 205000.
+Total Number of New Infections: 1765.
+Number of Survivors: 9599.
+Total Number of New Fatalities: 365.
+ 
+Time Step: 4.
+Total number of Interactions: 381400.
+Total Number of New Infections: 1.
+Number of Survivors: 9260.
+Total Number of New Fatalities: 339.
+ 
+Time Step: 5.
+Total number of Interactions: 399800.
+Total Number of New Infections: 0.
+Number of Survivors: 9218.
+Total Number of New Fatalities: 42.
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Summary >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Survivors: 9218.
+Total Number of Fatalities: 782.
+Total number of Vaccinated people: 9216.
+Total Interactions: 399800.
+Total Infections: 3992
+Number of times Vaccine saved infection: 359207

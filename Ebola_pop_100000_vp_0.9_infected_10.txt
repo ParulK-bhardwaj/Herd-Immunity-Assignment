@@ -1,91 +1,122 @@
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Simulation Date: December 09, 2022
+Simulation Date: December 10, 2022
 Herd Immunity Simulation for Ebola
 Population Size: 100000	Initial Infected:10
-Vaccination Rate: 0.9%	Mortality Rate: 0.45%	Reproduction Rate: 0.7%
+Vaccination Rate: 90.0%	Mortality Rate: 70.0%	Reproduction Rate: 25.0%
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 Time Step: 1.
 Total number of Interactions: 700.
- Total Number of New Infections: 48.
+Total Number of New Infections: 16.
 Number of Survivors: 99997.
 Total Number of New Fatalities: 3.
  
 Time Step: 2.
-Total number of Interactions: 5800.
- Total Number of New Infections: 353.
-Number of Survivors: 99972.
-Total Number of New Fatalities: 28.
+Total number of Interactions: 2500.
+Total Number of New Infections: 33.
+Number of Survivors: 99984.
+Total Number of New Fatalities: 13.
  
 Time Step: 3.
-Total number of Interactions: 37800.
- Total Number of New Infections: 2545.
-Number of Survivors: 99829.
-Total Number of New Fatalities: 171.
+Total number of Interactions: 5900.
+Total Number of New Infections: 93.
+Number of Survivors: 99964.
+Total Number of New Fatalities: 20.
  
 Time Step: 4.
-Total number of Interactions: 232600.
- Total Number of New Infections: 12986.
-Number of Survivors: 98943.
-Total Number of New Fatalities: 1057.
+Total number of Interactions: 15100.
+Total Number of New Infections: 234.
+Number of Survivors: 99897.
+Total Number of New Fatalities: 67.
  
 Time Step: 5.
-Total number of Interactions: 750900.
- Total Number of New Infections: 20379.
-Number of Survivors: 96666.
-Total Number of New Fatalities: 3334.
+Total number of Interactions: 38400.
+Total Number of New Infections: 546.
+Number of Survivors: 99729.
+Total Number of New Fatalities: 168.
  
 Time Step: 6.
-Total number of Interactions: 1206700.
- Total Number of New Infections: 20537.
-Number of Survivors: 94594.
-Total Number of New Fatalities: 5406.
+Total number of Interactions: 91100.
+Total Number of New Infections: 1112.
+Number of Survivors: 99367.
+Total Number of New Fatalities: 362.
  
 Time Step: 7.
-Total number of Interactions: 1520500.
- Total Number of New Infections: 20542.
-Number of Survivors: 93145.
-Total Number of New Fatalities: 6855.
+Total number of Interactions: 193700.
+Total Number of New Infections: 1783.
+Number of Survivors: 98663.
+Total Number of New Fatalities: 704.
  
 Time Step: 8.
-Total number of Interactions: 1738100.
- Total Number of New Infections: 20542.
-Number of Survivors: 92181.
-Total Number of New Fatalities: 7819.
+Total number of Interactions: 355700.
+Total Number of New Infections: 2140.
+Number of Survivors: 97495.
+Total Number of New Fatalities: 1168.
  
 Time Step: 9.
-Total number of Interactions: 1890200.
- Total Number of New Infections: 20542.
-Number of Survivors: 91527.
-Total Number of New Fatalities: 8473.
+Total number of Interactions: 550700.
+Total Number of New Infections: 1598.
+Number of Survivors: 96106.
+Total Number of New Fatalities: 1389.
  
 Time Step: 10.
-Total number of Interactions: 1993600.
- Total Number of New Infections: 20542.
-Number of Survivors: 91040.
-Total Number of New Fatalities: 8960.
+Total number of Interactions: 717400.
+Total Number of New Infections: 866.
+Number of Survivors: 94912.
+Total Number of New Fatalities: 1194.
  
 Time Step: 11.
-Total number of Interactions: 2063900.
- Total Number of New Infections: 20542.
-Number of Survivors: 90709.
-Total Number of New Fatalities: 9291.
+Total number of Interactions: 823700.
+Total Number of New Infections: 406.
+Number of Survivors: 94181.
+Total Number of New Fatalities: 731.
  
 Time Step: 12.
-Total number of Interactions: 2111800.
- Total Number of New Infections: 20542.
-Number of Survivors: 90485.
-Total Number of New Fatalities: 9515.
+Total number of Interactions: 877600.
+Total Number of New Infections: 177.
+Number of Survivors: 93817.
+Total Number of New Fatalities: 364.
  
 Time Step: 13.
-Total number of Interactions: 2145900.
- Total Number of New Infections: 20542.
-Number of Survivors: 90347.
-Total Number of New Fatalities: 9653.
+Total number of Interactions: 900100.
+Total Number of New Infections: 41.
+Number of Survivors: 93649.
+Total Number of New Fatalities: 168.
+ 
+Time Step: 14.
+Total number of Interactions: 905300.
+Total Number of New Infections: 11.
+Number of Survivors: 93611.
+Total Number of New Fatalities: 38.
+ 
+Time Step: 15.
+Total number of Interactions: 906600.
+Total Number of New Infections: 6.
+Number of Survivors: 93602.
+Total Number of New Fatalities: 9.
+ 
+Time Step: 16.
+Total number of Interactions: 907200.
+Total Number of New Infections: 1.
+Number of Survivors: 93597.
+Total Number of New Fatalities: 5.
+ 
+Time Step: 17.
+Total number of Interactions: 907300.
+Total Number of New Infections: 1.
+Number of Survivors: 93596.
+Total Number of New Fatalities: 1.
+ 
+Time Step: 18.
+Total number of Interactions: 907400.
+Total Number of New Infections: 0.
+Number of Survivors: 93596.
+Total Number of New Fatalities: 0.
  
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Summary >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Total Population: 90347.
-Total Number of Fatalities: 9653.
-Total number of Vaccinated people: 90000.
-Total Interactions: 2145900.
-Total Infections: 179184 
+Survivors: 93596.
+Total Number of Fatalities: 6404.
+Total number of Vaccinated people: 92670.
+Total Interactions: 907400.
+Total Infections: 9064
+Number of times Vaccine saved infection: 865551
